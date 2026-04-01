@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  video_generator:
+    image: your_video_generator_image_name # Replace this with the actual image name
+    build:
+      context: .
+      dockerfile: Dockerfile # If a Dockerfile is needed, specify it
+    ports:
+      - "8080:8080" # Adjust the ports as necessary
+    volumes:
+      - ./data:/app/data # Use volumes for persistent storage
+    environment:
+      - ENV_VARIABLE_NAME=value # Add your environment variables here
